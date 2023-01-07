@@ -44,11 +44,11 @@ class Solution:
             carry = tempWhole // 10
             tempSum = tempWhole % 10
 
-            #Place the sum into the next position of the sum linked list and move to the next node
+            # Place the sum into the next position of the sum linked list and move to the next node
             lSum.next = ListNode(tempSum)
             lSum = lSum.next
 
-            #Iterate to the next element in the list. Only do this if the end hasn't been reached to prevent error.
+            # Iterate to the next element in the list. Only do this if the end hasn't been reached to prevent error.
             if temp1 != None:
                 temp1 = temp1.next
             if temp2 != None:
