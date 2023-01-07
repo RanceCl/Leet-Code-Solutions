@@ -42,10 +42,9 @@ class Solution:
             # The carry value is found by removing the last digit of the number
             # The sum for the current position is found by isolating the last digit
             carry = tempWhole // 10
-            tempSum = tempWhole % 10
 
             # Place the sum into the next position of the sum linked list and move to the next node
-            lSum.next = ListNode(tempSum)
+            lSum.next = ListNode(tempWhole % 10)
             lSum = lSum.next
 
             # Iterate to the next element in the list. Only do this if the end hasn't been reached to prevent error.
