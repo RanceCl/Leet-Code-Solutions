@@ -3,9 +3,8 @@ This function takes in a string of characters and finds the character length of 
 in the characters of the input string and counting the substring length as well as indicating that said character was encountered. 
 
 A sliding window method was used for this purpose. The code would use a while loop to increment the rightmost bound of the window and indicate that they have been
-visited. 
-
-Once a repeat was encountered, the substring length would be compared with the current longest substring's length.
+visited. Once a repeat was encountered, the code would determine the length of the current substring using the window size. It would proceed to indicate that all
+characters within the window before the encountered variable hadn't been encountered while incrementing the left window boundary. 
 
 An 128 integer long array was used to hold the number of each character that was encountered, with each index corresponding to the integer value of a 
 character (a=97,b=98,c=99,...).
