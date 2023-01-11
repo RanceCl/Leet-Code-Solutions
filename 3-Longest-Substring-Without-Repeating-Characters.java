@@ -22,9 +22,7 @@ class Solution {
             /* If the current character is already in the window, shift the window */
             if(sWindow.contains(String.valueOf(ch)))
             {
-                //Shift window to be after the repeated character
-                if(sWindow.contains(String.valueOf(ch)))
-                    sWindow = sWindow.substring(sWindow.indexOf(String.valueOf(ch))+1);
+                sWindow = sWindow.substring(sWindow.indexOf(String.valueOf(ch))+1);
             }
             sWindow = sWindow + ch;                                     // Add the current character to the window
             longestLength = Math.max(longestLength, sWindow.length());
