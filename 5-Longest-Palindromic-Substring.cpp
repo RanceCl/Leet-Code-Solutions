@@ -15,12 +15,6 @@ compared to the currently stored longest substring.
 This was repeated until all characters as centers were 
 exhausted, with the final substring stored being the 
 longest in s. 
-
-It should be noted that placing the length comparison if 
-statement into the expansion function could allow for a 
-slightly more memory efficient solution. However, the 
-helper function is useful enough on its own, so this 
-separation was done for modularity. 
 */
 
 class Solution {
