@@ -50,7 +50,7 @@ public:
         string zigzag;
 
         // Add together each row of the temporary vector into a single, one line string.
-        for(int k = 0; k<numRows; k++) zigzag += temp[k];
+        for(int i = 0; i<numRows; i++) zigzag += temp[i];
         
         return zigzag;
     }
