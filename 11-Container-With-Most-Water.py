@@ -18,25 +18,29 @@ n == height.length
 '''
 class Solution:
     def maxArea(self, height: List[int]) -> int:
-        leftPointer,rightPointer,maxArea = 0,len(height)-1,0
+        leftPointer, rightPointer, maxArea = 0, len(height)-1, 0
 
         #Loop through the heights until the walls meet. 
         while leftPointer < rightPointer:
             tempArea = self.areaCalculator(rightPointer - leftPointer, height[leftPointer], height[rightPointer])
             
             # Make sure the new area is larger than the currently stored maximum. 
-            if tempArea > maxArea: maxArea = tempArea
+            if tempArea > maxArea: 
+                maxArea = tempArea
             
             # Shift left pointer to the right if it is pointing to the lower wall.
-            if height[leftPointer] < height[rightPointer]: leftPointer += 1
+            if height[leftPointer] < height[rightPointer]: 
+                leftPointer += 1
             
             # Shift right pointer to the left if it is pointing to the lower wall.
-            else: rightPointer -= 1
+            else: 
+                rightPointer -= 1
             
         return maxArea
 
     # Calculates the area of the current container based on the heights of each wall and the distance between them.
     def areaCalculator(self, l, h1, h2):
         # The water level can't be above the lowest wall, so use the lowest wall for the calculation.
-        if(h1 < h2): return l * h1
+        if(h1 < h2): 
+            return l * h1
         return l * h2
