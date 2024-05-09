@@ -31,7 +31,9 @@ class Solution:
             listMCurr = listMCurr.next
         
         # Add the rest of which ever list remains to the end of the merged list
-        if list1: listMCurr.next = list1
-        if list2: listMCurr.next = list2
+        if list1: 
+            listMCurr.next = list1
+        if list2: 
+            listMCurr.next = list2
         
         return listMerged.next
