@@ -22,13 +22,16 @@ class Solution:
         behindNode = aheadNode = head
 
         # Pointer that will reach the end of the list.
-        for _ in range(n): aheadNode = aheadNode.next
+        for _ in range(n): 
+            aheadNode = aheadNode.next
 
         # If the head needs to be removed.
-        if not aheadNode: return head.next
+        if not aheadNode: 
+            return head.next
 
         # Loop until the ahead node reaches the end, which will prepare the current node for removal.
-        while aheadNode.next is not None: behindNode, aheadNode = behindNode.next, aheadNode.next
+        while aheadNode.next is not None: 
+            behindNode, aheadNode = behindNode.next, aheadNode.next
         
         # Remove the desired node.
         behindNode.next = behindNode.next.next
