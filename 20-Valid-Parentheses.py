@@ -23,9 +23,11 @@ class Solution:
         # Loop through every character in the given string.
         for i in s:
             # Push open brackets to the top of the stack
-            if i in brack: stack.append(i)
+            if i in brack: 
+                stack.append(i)
             # If an incorrect bracket is encountered, the parentheses aren't valid.
-            elif len(stack) == 0 or brack[stack.pop()] != i: return False
+            elif len(stack) == 0 or brack[stack.pop()] != i: 
+                return False
         # If the entire string is looped through and the stack is empty, the parentheses are valid.
         return len(stack) == 0
         
