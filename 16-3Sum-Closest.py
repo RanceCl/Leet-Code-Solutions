@@ -20,7 +20,8 @@ class Solution:
         # Two sum
         for i in range(numsLen-2):
             # Skip duplicates
-            if i > 0 and nums[i] == nums[i-1]: continue
+            if i > 0 and nums[i] == nums[i-1]: 
+                continue
 
             # Two pointers from each side of the list
             j = i+1
@@ -37,7 +38,9 @@ class Solution:
                     finalSum = currSum
                 
                 # Close in until a new potential sum is found.
-                if currSum > target: k -= 1
-                elif currSum < target: j += 1
+                if currSum > target: 
+                    k -= 1
+                elif currSum < target: 
+                    j += 1
         
         return finalSum
