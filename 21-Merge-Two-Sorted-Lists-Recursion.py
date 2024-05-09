@@ -19,7 +19,8 @@ Both list1 and list2 are sorted in non-decreasing order.
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         # When the end of one of the lists is reached, everything in the remaining list can be appended
-        if not list1 or not list2: return list1 or list2
+        if not list1 or not list2: 
+            return list1 or list2
         
         # The list 1 value is the next value to be added. 
         if list1.val <= list2.val:
