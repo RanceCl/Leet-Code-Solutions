@@ -21,7 +21,8 @@ class Solution:
         while i < minL:
             # Compare the characters at the index for each string.
             for s in strs[1:]:
-                if s[i] != strs[0][i]: return s[:i]
+                if s[i] != strs[0][i]: 
+                    return s[:i]
             i += 1
         # Used in the instance that an entire string is a match. 
         return strs[0][:i]
@@ -35,7 +36,6 @@ class Solution:
 
         # Find the smallest length
         for s in strs[1:]:
-            print(minL)
             if minL > len(s):
                 minL = len(s)
         return minL
