@@ -16,7 +16,7 @@ return the index of target if it is in nums, or -1 if it is not in nums.
 You must write an algorithm with O(log n) runtime complexity.
 
 
-We want to use binary search to narrow in on the minimum, though due to the 
+We want to use binary search to narrow in on the target, though due to the 
 rotation of the array, it is no longer in ascending order. There are still 
 some rules that we can use, however.
 
